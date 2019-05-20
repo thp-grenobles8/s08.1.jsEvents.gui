@@ -80,3 +80,24 @@ document.querySelectorAll("section a")[0]
 })
 
 // F9
+document.querySelector(".navbar-brand")
+.addEventListener("keypress", function (ev) {
+  let body = document.body
+  switch (ev.key) {
+    case "a":
+      body.classList = ""
+      body.classList.add("col-4")
+      break;
+    case "y":
+      body.classList = ""
+      body.classList.add("col-4","offset-md-4")
+      break;
+    case "p":
+      body.classList = ""
+      body.classList.add("col-4","offset-md-8")
+      break;
+    case "b":
+      body.classList = ""
+      break;
+  }
+})
