@@ -42,3 +42,41 @@ document.querySelector(".navbar")
     styleSheet.disabled = true;
   }
 });
+
+// F6
+document.querySelectorAll(".card")
+.forEach(function (card) {
+  card.querySelector("button")
+  .addEventListener("mouseover", function () {
+    card.querySelector("p")
+    .classList.toggle("collapse");
+    let img = card.querySelector("img");
+    if (img.style.width === "20%") {
+      img.style.width = "100%";
+    } else {
+      img.style.width = "20%";
+    }
+  });
+});
+
+// F7
+document.querySelectorAll("section a")[1]
+.addEventListener("click", function () {
+  let row = document.querySelector(".album .row")
+  row.insertBefore(
+    row.lastElementChild,
+    row.firstChild
+  );
+})
+
+// F8
+document.querySelectorAll("section a")[0]
+.addEventListener("click", function (ev) {
+  ev.preventDefault(); // pour le lien
+  let row = document.querySelector(".album .row")
+  row.appendChild(
+    row.firstElementChild
+  );
+})
+
+// F9
