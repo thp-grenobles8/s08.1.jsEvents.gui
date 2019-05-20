@@ -1,4 +1,5 @@
 
+
 // F1 F1bis
 var clickCount = 0
 document.getElementsByTagName("footer")[0]
